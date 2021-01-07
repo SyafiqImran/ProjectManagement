@@ -21,7 +21,7 @@ This app is developed to help project management to ensure efficiencies in plann
 Challenges
 The most challenging part in development of ProyeCto app is to developed the sign in and sign up, to communicate with API and database and to ensure team collaborations in git hub. 
 
-Team Members Github Link : 
+Team Members Github Link : <br>
 Ng Hooi Kien : https://github.com/kienng5151
 Mohd Nurhadi : https://github.com/hadimdnor
 Nurul Aida   : https://github.com/aidaziz89
