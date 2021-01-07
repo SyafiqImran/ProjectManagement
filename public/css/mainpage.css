@@ -1,0 +1,32 @@
+body{
+    font-family: 'Inconsolata', monospace;
+    text-align: center;   
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    background: black;
+    color: white;
+}
+#members, #tasks{
+    text-align: center;
+    font-size: 7px;
+    padding: 1%;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#members{
+    background: black;
+    color: white;
+}
+#members h2{ 
+   
+    padding: 1px;
+    border-bottom: black;
+}
+#profile, #logout{
+    margin-top: 15px; 
+}

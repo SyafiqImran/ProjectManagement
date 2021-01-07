@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/css/moretask.css">
+</head>
+<body>
+
+    <h2>Add More Task Here:</h2>
+
+    <form action="/moretasks" method="POST">
+        <label for="">Task Name:</label>
+        <input type="text" name="task_name">
+
+        <label for="">Due Date:</label>
+        <input type="date" name="due_date">
+
+        <label for="">Details About This Task: </label>
+        <textarea name="content" id="" cols="50" rows="15"></textarea>
+
+        <br>
+        <button>Submit</button>
+    </form>
+
+</body>
+</html>

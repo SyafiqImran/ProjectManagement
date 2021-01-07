@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Project Management</title>
+</head>
+<body>
+    <div class="content-wrapper">
+
+        <h1>Hi <%= userName %>, your current task</h1>
+
+        
+        <br>
+
+        <div class="project-name_and-details">
+            <!-- <h2>Task to do: </h2> -->
+            
+            <% for (let i = 0; i < tasks.length; i++) { %> 
+                <form action=<%= "/completed/" + tasks[i].id + "?_method=PATCH" %> method="POST">
+                    <section class="task-details">    
+                        <p>Task Name : <%= tasks[i].task_name %></p>
+                        <p>Task Due Date : <%= tasks[i].due_date %></p>
+                        <p>Task Details : <%= tasks[i].details %></p>
+
+                        <!-- <button class="completed-btn">Completed</button> -->
+                        <button onclick="completedButtonStyle(this)" class="stylebutton">Completed</button>
+                    </section>
+                </form>
+            <% } %>   
+            
+        </div>
+
+        <div class="back-btn">
+            <a href="/mainpage">Back to main page</a>
+        </div>
+        
+     </div>    
+        
+        <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+        <script src="/js/progress-bar.js"></script>
+        <script>
+            // var buttonComplete = document.querySelectorAll('.stylebutton')
+            // // buttonComplete is an array
+            // for(let i = 0; i < buttonComplete.length; i++) {
+            //     buttonComplete[i].addEventListener('click', function(event){
+            //         event.preventDefault()
+            //     })
+            // }
+            
+        </script>
+</body>
+</html>

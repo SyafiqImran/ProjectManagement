@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="/css/details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+
+
+    <style>
+        body{
+            text-align: center;
+        }
+        h3{
+            background-color: black;
+            color: white;
+            height: 60px;
+            text-align: center;
+            font-family: 'Inconsolata', monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <h3>Task Details</h3>
+        <h5> Task Name :  <%= task_details.task_name %></h5>
+        <h5> Task Due Date : <%= task_details.due_date %></h5>
+        <h5> Task Oveview : <%= task_details.details %></h5>
+    </div>
+    <form action= <%= "/edit/" + task_id + "?_method=PATCH" %> method="POST">
+        <!-- "/details/"  + filter_task[i].id  -->
+        <button>Add to bucket</button>
+    </form>
+    <a href="/mainpage"><button>Go back MainPage</button></a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="/js/details.js"></script> -->
+</body>
+</html>

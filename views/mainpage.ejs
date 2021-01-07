@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="/css/mainpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .myProgress {
+    width: 100%;
+    background-color: #ddd;
+}
+  
+.myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white;
+}
+    </style>
+  
+</head>
+<body>
+    <header>
+
+        <div id="profile">
+            <a href="/personalpage"><button>Your Profile</button></a>
+        </div>
+        <div id="welcome">
+            <h1>Hi <%= userName %> </h1>
+        </div>
+        
+        <div id="logout">
+            <form action="/logout?_method=DELETE" method="POST">
+                <button type="submit">Log Out</button>
+            </form>
+        </div>
+        
+    </header>
+    <br>
+    <div class="myProgress">
+        <h3>Project Progress :</h3>
+        <div class="myBar">0%</div>
+    </div>
+    <br>
+    <main> 
+        <div id="members"> 
+            <h3>List of Members</h3>
+          
+        </div>
+        <div id="tasks">
+            <h4> Here are the current list of task that is not assigned to anyone yet :</h4>
+            <% for (let i = 0; i < filter_task.length; i++) { %>
+                <h5> <%= filter_task[i].task_name %> </h4>
+                    <a href= <%= "/details/"  + filter_task[i].id %> ><button>More details</button></a>
+            <% } %>
+            <br>
+            <br>
+            <a href="/moretasks"><button>Add More Task</button></a>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/mainpage.js"></script>
+   <script>
+
+   </script>
+</body>
+</html>
+

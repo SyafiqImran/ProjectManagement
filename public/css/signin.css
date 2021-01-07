@@ -1,0 +1,29 @@
+
+        body{
+            text-align: center;
+            /* border: solid black; */
+            width: 30%;
+            margin-left: 60%;
+            font-family: 'Inconsolata', monospace;
+            margin-top: 20%;
+            background-image: url(https://20o8nn37v3mzb7unq3fsj61e-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/6-Project-Management-Techniques-Every-PM-Should-Know.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: black;
+            
+            
+        }
+        .email{
+            display: inline-block;
+            margin-top: 10%;
+        }
+
+        .overall{
+            margin-bottom: 40%;
+        }
+
+        a{
+            text-emphasis-color: black;
+        }
+
+ 
